@@ -2,6 +2,8 @@ import React, { SFC, useEffect, useCallback } from "react";
 
 import "./style.scss";
 
+const snd = new Audio("https://balthazar-rouberol.com/public/ypsilon14/error.wav");
+
 export interface ModalProps {
     text: string | string[];
     className?: string;
@@ -17,6 +19,7 @@ const Modal: SFC<ModalProps> = (props) => {
 
     const renderContent = () => {
         const content = (typeof text === "string") ? [text] : text;
+        snd.play()
         return content.map((element, index) => <p key={index}>{element}</p>);
     }
 

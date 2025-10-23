@@ -9,11 +9,12 @@
             "id": "screen0",
             "type": "screen",
             "content": [
-                "YPSILON-14",
-                "==========",
+                "YPSILON-14 - WORKSPACE COMPUTER",
+                "===============================",
                 "",
-                "Welcome to the Ypsilon-14 Mining Station, a property of ISHIYAMA DYNAMICS (c), where innovation is our top priority (tm).",
-                "==========",
+                "Welcome to the Ypsilon-14 Mining Station, a property of SHIN-ETSU DYNAMICS ©, where innovation is our top priority™.",
+                "",
+                "===============================",
                 "",
                 {
                     "text": "> ACCEPT EULA & LOG IN",
@@ -26,6 +27,8 @@
             "id": "menu",
             "type": "screen",
             "content": [
+                "SHIN-ETSU DYNAMICS ©",
+                "",
                 "Main Menu",
                 "=========",
                 "",
@@ -40,14 +43,24 @@
                     "target": "diagnostics"
                 },
                 {
-                    "text": "> SCHEDULE",
+                    "text": "> SHIFT SCHEDULE",
                     "type": "link",
-                    "target": "schedule"
+                    "target": "shiftschedule"
+                },
+                {
+                    "text": "> DOCKING BAY ACTIVITY",
+                    "type": "link",
+                    "target": "dockingbayactivity"
                 },
                 {
                     "text": "> ROSTER",
                     "type": "link",
                     "target": "roster"
+                },
+                {
+                    "text": "> SURVEILLANCE",
+                    "type": "link",
+                    "target": "surveillance"
                 },
                 {
                     "text": "> COMMS",
@@ -58,25 +71,115 @@
                     "text": "> CONTROLS",
                     "type": "link",
                     "target": "controls"
+                },
+                "",
+                "=========",
+                {
+                    "text": "< EXIT",
+                    "type": "link",
+                    "target": "screen0"
                 }
             ]
         },
         {
+            "id": "surveillance",
+            "type": "screen",
+            "content": [
+                "SHIN-ETSU DYNAMICS ©",
+                "",
+                "CAMERA FEEDS",
+                "============",
+                "",
+                {
+                    "text": "> Mess Hall",
+                    "type": "link",
+                    "target": "messhall"
+                },
+                {
+                    "text": "> Corridor",
+                    "type": "link",
+                    "target": "corridor"
+                },
+                "",
+                {
+                    "text": "WARNING: By virtue of company policy #3767-K, SHIN-ETSU DYNAMICS © owns recordings of your image and you acknowledge that these recordings may be used for AI and models training purposes.",
+                    "className": "alert",
+                    "type": "text"
+                },
+                "",
+                "============",
+                {
+                    "text": "< BACK",
+                    "target": "menu",
+                    "type": "link"
+                }
+            ]
+        },
+        {
+            "id": "messhall",
+            "type": "screen",
+            "content": [
+                "SHIN-ETSU DYNAMICS ©",
+                "",
+                "CAMERA :: MESS HALL",
+                "===================",
+                "",
+                {
+                    "type": "bitmap",
+                    "src": "https://balthazar-rouberol.com/public/ypsilon14/Ypsilon_01_MESS.png",
+                    "className": "lighten"
+                },
+                "",
+                "===================",
+                "",
+                {
+                    "text": "< BACK",
+                    "target": "surveillance",
+                    "type": "link"
+                }
+            ]
+        },
+        {
+            "id": "corridor",
+            "type": "screen",
+            "content": [
+                "SHIN-ETSU DYNAMICS ©",
+                "",
+                "CAMERA :: CORRIDOR",
+                "==================",
+                "",
+                {
+                    "type": "bitmap",
+                    "src": "https://balthazar-rouberol.com/public/ypsilon14/Ypsilon_02_QUARTERS-Corridor.png",
+                    "className": "lighten"
+                },
+                "==================",
+                "",
+                {
+                    "text": "< BACK",
+                    "target": "surveillance",
+                    "type": "link"
+                }
+            ]
+        },
+
+
+        {
             "id": "map",
             "type": "screen",
             "content": [
-                "Station Map",
+                "SHIN-ETSU DYNAMICS ©",
+                "",
+                "STATION MAP",
                 "===========",
                 "",
                 {
                     "type": "bitmap",
-                    "src": "https://i.imgur.com/htHuumj.png",
+                    "src": "https://cdn.blot.im/folder/v-ed72af5d/blog_beef9c9206b24754bb9b7a955cc008e6/_images/ypsilon-14-map-color.png",
                     "className": "lighten"
                 },
                 "",
-                "A copy of the map is now available via data tablet.",
-                "",
-                "======",
+                "===========",
                 "",
                 {
                     "text": "< BACK",
@@ -89,7 +192,9 @@
             "id": "diagnostics",
             "type": "screen",
             "content": [
-                "Diagnostics",
+                "SHIN-ETSU DYNAMICS ©",
+                "",
+                "DIAGNOSTICS",
                 "===========",
                 "",
                 "Checking life support.............. Done.",
@@ -107,14 +212,14 @@
                 },
                 "",
                 "NOTICE: Air filters replaced 455 day(s) ago.",
-                "NOTICE: Mineshaft lift maintained 455 day(s) ago.",
+                "NOTICE: Mineshaft lift maintained 278 day(s) ago.",
                 "",
                 "===========",
                 "",
                 "SUMMARY:",
                 "All systems operating within acceptible parameters.",
                 "",
-                "======",
+                "===========",
                 "",
                 {
                     "text": "< BACK",
@@ -124,20 +229,56 @@
             ]
         },
         {
-            "id": "schedule",
+            "id": "dockingbayactivity",
             "type": "screen",
             "content": [
-                "Schedule",
-                "========",
+                "SHIN-ETSU DYNAMICS ©",
                 "",
-                "Docking bay activity (past 6 months):",
+                "DOCKING BAY ACTIVITY",
+                "====================",
                 "",
-                "2366-06-12.0633 - Bay 2 : Arrive :: Tempest",
-                "2366-04-29.0834 - Bay 1 : Arrive :: Heracles",
-                "2366-03-02.1223 - Bay 2 : Depart :: Key Largo",
-                "2366-02-20.1604 - Bay 2 : Arrive :: Key Largo",
+                "Past 6 months:",
                 "",
-                "======",
+                "2366-06-17.0933 - Bay 2 : Arrival :: Constantine",
+                "2366-04-29.0834 - Bay 1 : Arrival :: Heracles",
+                "2366-03-02.1223 - Bay 2 : Depart. :: Key Largo",
+                "2366-02-20.1604 - Bay 2 : Arrival :: Key Largo",
+                "",
+                "====================",
+                "",
+                {
+                    "text": "< BACK",
+                    "target": "menu",
+                    "type": "link"
+                }
+            ]
+        },
+        {
+            "id": "shiftschedule",
+            "type": "screen",
+            "content": [
+                "SHIN-ETSU DYNAMICS ©",
+                "",
+                "SHIFT SCHEDULE",
+                "==============",
+                "",
+                "2366-06-12 - 16h-00h - Sonya / Dana / Jerome / Morgan",
+                "",
+                "2366-06-13 - 08h-16h - Dana / Morgan / Rosa / Ashraf",
+                "2366-06-13 - 16h-00h - Sonya / Dana / Ashraf / M̶i̶k̶e̶ Rosa",
+                "",
+                "2366-06-14 - 08h-16h - Jerome / M̶i̶k̶e̶ Sonya / Kantaro / Rie",
+                "2366-06-14 - 16h-00h - Sonya / Dana / Kantaro / Rie",
+                "",
+                "2366-06-15 - 08h-16h - Dana / Morgan / Rosa / Ashraf",
+                "2366-06-15 - 08h-16h - Sonya / Dana / Jerome / M̶i̶k̶e̶  Morgan",
+                "",
+                "2366-06-16 - 08h-16h - Jerome / M̶i̶k̶e̶ Sonya / Kantaro / Rie",
+                "2366-06-16 - 08h-16h - Sonya / Dana / Rosa / Ashraf",
+                "",
+                "2366-06-17 - 08h-16h - Dana / Morgan / Rosa / Ashraf",
+                "2366-06-17 - 16h-00h - M̶i̶k̶e̶ Sonya / Dana / Kantaro / Rie",
+                "==============",
                 "",
                 {
                     "text": "< BACK",
@@ -150,20 +291,15 @@
             "id": "roster",
             "type": "screen",
             "content": [
-                "Roster",
+                "SHIN-ETSU DYNAMICS ©",
+                "",
+                "ROSTER",
                 "======",
-                "",
-                "01. VERHOEVEN, Sonya     :: Admin",
-                "02. SINGH, Ashraf        :: Breaker",
-                "03. DE BEERS, Dana       :: Lead drill",
-                "04. CHATZKEL, Jerome     :: Asst. drill",
-                "05. TOBIN, Rosa          :: Engineer",
-                "06. RADIMIR, Mikhail     :: Lead Engineer",
-                "07. KANTARO, Kenji       :: Loader",
-                "08. BOWE, Morgan         :: Loader",
-                "09. NEKTARIOS, Ri        :: Loader",
-                "10. n/a",
-                "",
+                {
+                    "type": "bitmap",
+                    "src": "https://balthazar-rouberol.com/public/ypsilon14/roster.png",
+                    "className": "lighten"
+                },
                 "======",
                 "",
                 {
@@ -177,23 +313,25 @@
             "id": "comms",
             "type": "screen",
             "content": [
+                "SHIN-ETSU DYNAMICS ©",
+                "",
                 "COMMS",
                 "=====",
                 "",
                 "2 vessels detected in proximity.",
                 "",
                 {
-                    "text": "> HAIL TEMPEST",
+                    "text": "> HAIL CONSTANTINE",
                     "target": "hailtempest",
                     "type": "link"
                 },
                 {
-                    "text": "> HAIL HERECLES",
+                    "text": "> HAIL HERACLES",
                     "target": "hailherecles",
                     "type": "link"
                 },
                 "",
-                "======",
+                "=====",
                 "",
                 {
                     "text": "< BACK",
@@ -206,6 +344,8 @@
             "id": "hailtempest",
             "type": "screen",
             "content": [
+                "SHIN-ETSU DYNAMICS ©",
+                "",
                 "Transmitting",
                 "============",
                 "",
@@ -227,9 +367,15 @@
             "id": "hailherecles",
             "type": "screen",
             "content": [
+                "SHIN-ETSU DYNAMICS ©",
+                "",
                 "Transmitting",
                 "============",
                 "",
+                "..........................................",
+                "..........................................",
+                "..........................................",
+                "..........................................",
                 "..........................................",
                 "..........................................",
                 "..........................................",
@@ -254,7 +400,9 @@
             "id": "controls",
             "type": "screen",
             "content": [
-                "Controls",
+                "SHIN-ETSU DYNAMICS ©",
+                "",
+                "CONTROLS",
                 "========",
                 "",
                 "[A] :: Administrator access only",
@@ -302,7 +450,7 @@
                     ]
                 },
                 "",
-                "======",
+                "========",
                 "",
                 {
                     "text": "< BACK",
@@ -315,12 +463,14 @@
             "id": "airlocks",
             "type": "screen",
             "content": [
-                "Airlocks",
+                "SHIN-ETSU DYNAMICS ©",
+                "",
+                "AIRLOCKS",
                 "========",
                 "",
                 {
                     "type": "link",
-                    "text": "> DOCKING BAY 1 :: LOCKED — ERROR",
+                    "text": "> DOCKING BAY 1 :: HERACLES :: LOCKED — ERROR",
                     "className": "alert",
                     "target": [
                         {
@@ -334,17 +484,17 @@
                     "type": "toggle",
                     "states": [
                         {
-                            "text": "> DOCKING BAY 2 :: UNLOCKED",
+                            "text": "> DOCKING BAY 2 :: CONSTANTINE :: UNLOCKED",
                             "active": true
                         },
                         {
-                            "text": "> DOCKING BAY 2 :: LOCKED",
+                            "text": "> DOCKING BAY 2 :: CONSTANTINE :: LOCKED",
                             "active": false
                         }
                     ]
                 },
                 "",
-                "======",
+                "========",
                 "",
                 {
                     "text": "< BACK",
@@ -357,7 +507,9 @@
             "id": "showers",
             "type": "screen",
             "content": [
-                "Showers",
+                "SHIN-ETSU DYNAMICS ©",
+                "",
+                "SHOWERS",
                 "=======",
                 "",
                 {
@@ -431,7 +583,7 @@
                     ]
                 },
                 "",
-                "======",
+                "=======",
                 "",
                 {
                     "text": "< BACK",
@@ -444,7 +596,9 @@
             "id": "greenhouse",
             "type": "screen",
             "content": [
-                "Hydroponics Lab",
+                "SHIN-ETSU DYNAMICS ©",
+                "",
+                "HYDROPONICS LAB",
                 "===============",
                 "",
                 {
@@ -461,7 +615,7 @@
                     ]
                 },
                 "",
-                "======",
+                "===============",
                 "",
                 {
                     "text": "< BACK",
@@ -474,7 +628,9 @@
             "id": "system",
             "type": "screen",
             "content": [
-                "System",
+                "SHIN-ETSU DYNAMICS ©",
+                "",
+                "SYSTEM",
                 "======",
                 "",
                 {
@@ -501,13 +657,15 @@
             "id": "lifesupport",
             "type": "screen",
             "content": [
-                "Life Support",
+                "SHIN-ETSU DYNAMICS ©",
+                "",
+                "LIFE SUPPORT",
                 "============",
                 "",
                 {
                     "type": "text",
                     "className": "alert",
-                    "text": "WARNING: Disabling life support is a violation of company policy #2778-A. ISHIYAMA DYNAMICS assumes no responsibilities or liabilities resulting from the improper use of this feature."
+                    "text": "WARNING: Disabling life support is a violation of company policy #2778-A. SHIN-ETSU DYNAMICS © assumes no responsibilities or liabilities resulting from the improper use of this feature."
                 },
                 "",
                 {
@@ -524,7 +682,7 @@
                     ]
                 },
                 "",
-                "======",
+                "============",
                 "",
                 {
                     "text": "< BACK",
@@ -537,13 +695,15 @@
             "id": "selfdestruct",
             "type": "screen",
             "content": [
-                "Self-Destruct",
+                "SHIN-ETSU DYNAMICS ©",
+                "",
+                "SELF-DESTRUCT",
                 "=============",
                 "",
                 {
                     "type": "text",
                     "className": "alert",
-                    "text": "WARNING: Destruction of corporate property is a violation of company policy #2778-B. ISHIYAMA DYNAMICS assumes no responsibilities or liabilities resulting from the improper use of this feature."
+                    "text": "WARNING: Destruction of corporate property is a violation of company policy #2778-B. SHIN-ETSU DYNAMICS © assumes no responsibilities or liabilities resulting from the improper use of this feature."
                 },
                 "",
                 {
@@ -552,7 +712,7 @@
                     "type": "link"
                 },
                 "",
-                "======",
+                "=============",
                 "",
                 {
                     "text": "< BACK",
@@ -565,7 +725,9 @@
             "id": "activateeslfdestruct",
             "type": "screen",
             "content": [
-                "Activate Self-Destruct",
+                "SHIN-ETSU DYNAMICS ©",
+                "",
+                "ACTIVATE SELF-DESTRUCT",
                 "======================",
                 "",
                 {
@@ -608,6 +770,8 @@
             "id": "evacuate",
             "type": "screen",
             "content": [
+                "SHIN-ETSU DYNAMICS ©",
+                "",
                 {
                     "type": "text",
                     "className": "alert",
@@ -617,6 +781,11 @@
                     "type": "text",
                     "className": "alert",
                     "text": "PLEASE EVACUATE AS SOON AS POSSIBLE."
+                },
+                {
+                    "type": "text",
+                    "className": "alert",
+                    "text": "THIS INCIDENT WILL BE REPORTED."
                 }
             ]
         }
