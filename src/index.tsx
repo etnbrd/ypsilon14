@@ -1,14 +1,21 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Phosphor from "./components/Phosphor";
+import AdminDashboard from "./Admin";
 
 import * as serviceWorker from "./serviceWorker";
 
 ReactDOM.render(
-    <React.StrictMode>
-        <Phosphor />
-    </React.StrictMode>,
-    document.getElementById("root")
+  <React.StrictMode>
+    <Router>
+      <Switch>
+        <Route exact path="/admin" component={AdminDashboard} />
+        <Route path="/" component={Phosphor} />
+      </Switch>
+    </Router>
+  </React.StrictMode>,
+  document.getElementById("root"),
 );
 
 // If you want your app to work offline and load faster, you can change

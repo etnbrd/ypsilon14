@@ -3,9 +3,7 @@ import React, { Component, ReactElement } from "react";
 // css
 import "./style.scss";
 
-const snd = new Audio(
-  "https://balthazar-rouberol.com/public/ypsilon14/Computer_Text_Print.wav",
-);
+const snd = new Audio("/Computer_Text_Print.wav");
 
 interface TeletypeProps {
   text: string; // text to animate

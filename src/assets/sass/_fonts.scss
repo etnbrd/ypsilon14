@@ -7,8 +7,15 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: "FVga";
+    src: url("../fonts/Flexi_IBM_VGA_True.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
 // TODO: add theme mixins
-$font-family: "Vga", Menlo, Monaco, Consolas, "Courier New", monospace;
+$font-family: "FVga", Menlo, Monaco, Consolas, "Courier New", monospace;
 
 $scalefactor: 2.0;
 // the following values are font-dependant
